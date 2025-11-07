@@ -22,7 +22,7 @@ export default function App() {
   }, [page]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900">
+    <div className="min-h-screen bg-black text-white">
       <Navbar current={page} onNavigate={setPage} />
       {Page}
       {page === 'home' && (
@@ -32,13 +32,13 @@ export default function App() {
           <About />
         </>
       )}
-      <footer className="border-t border-gray-200 mt-16">
-        <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>© {new Date().getFullYear()} Lari Raya • Komunitas Lari Indonesia</div>
+      <footer className="border-t border-slate-800 mt-16">
+        <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-300 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>© {new Date().getFullYear()} Lari Geli-geli • Komunitas Lari Indonesia</div>
           <div className="flex gap-4">
-            <a href="#events" className="hover:text-gray-900">Kegiatan</a>
-            <a href="#gallery" className="hover:text-gray-900">Galeri</a>
-            <a href="#about" className="hover:text-gray-900">Tentang</a>
+            <a href="#events" className="hover:text-white">Kegiatan</a>
+            <a href="#gallery" className="hover:text-white">Galeri</a>
+            <a href="#about" className="hover:text-white">Tentang</a>
           </div>
         </div>
       </footer>

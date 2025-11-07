@@ -33,12 +33,12 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-16 bg-gray-50">
+    <section id="gallery" className="py-16 bg-slate-950">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex items-end justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Galeri</h2>
-            <p className="text-gray-600 mt-1">Tambahkan foto kegiatanmu dan lihat momen terbaik komunitas.</p>
+            <h2 className="text-3xl font-bold text-white">Galeri</h2>
+            <p className="text-slate-300 mt-1">Tambahkan foto kegiatanmu dan lihat momen terbaik komunitas.</p>
           </div>
           <div className="flex items-center gap-3">
             <input
@@ -51,7 +51,7 @@ export default function Gallery() {
             />
             <button
               onClick={() => fileInput.current?.click()}
-              className="px-4 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900"
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 text-slate-900 text-sm font-bold"
             >
               Tambah Foto
             </button>
@@ -59,15 +59,15 @@ export default function Gallery() {
         </div>
 
         {images.length === 0 ? (
-          <div className="text-center text-gray-600">Belum ada foto. Tambahkan yang pertama!</div>
+          <div className="text-center text-slate-300">Belum ada foto. Tambahkan yang pertama!</div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {images.map((src, idx) => (
-              <div key={idx} className="group relative overflow-hidden rounded-xl bg-white border border-gray-200">
+              <div key={idx} className="group relative overflow-hidden rounded-xl bg-slate-900/60 border border-slate-800">
                 <img src={src} alt={`Foto ${idx + 1}`} className="h-44 w-full object-cover" />
                 <button
                   onClick={() => remove(idx)}
-                  className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity px-2 py-1 text-xs rounded-full bg-white/90 border border-gray-200"
+                  className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity px-2 py-1 text-xs rounded-full bg-slate-900/80 border border-slate-700 text-white"
                 >
                   Hapus
                 </button>

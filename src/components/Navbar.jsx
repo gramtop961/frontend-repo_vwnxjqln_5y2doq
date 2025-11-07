@@ -4,8 +4,8 @@ import { Home, Images, CalendarDays, Info } from 'lucide-react';
 const NavItem = ({ label, icon: Icon, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-colors ${
-      active ? 'bg-black text-white' : 'bg-white/70 hover:bg-white text-gray-800'
+    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-colors border ${
+      active ? 'bg-sky-400/20 text-sky-300 border-sky-500/30' : 'bg-slate-900/60 hover:bg-slate-800/80 text-slate-200 border-slate-700'
     }`}
   >
     <Icon size={16} />
@@ -15,14 +15,14 @@ const NavItem = ({ label, icon: Icon, active, onClick }) => (
 
 export default function Navbar({ current, onNavigate }) {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b border-gray-200">
+    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/50 bg-slate-900/80 border-b border-slate-800">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex items-center justify-between py-3">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black text-white font-bold">LR</span>
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-sky-300 to-cyan-400 text-slate-900 font-extrabold">LG</span>
             <div className="flex flex-col">
-              <span className="font-semibold">Lari Raya</span>
-              <span className="text-xs text-gray-500">Komunitas Lari Indonesia</span>
+              <span className="font-semibold text-white">Lari Geli-geli</span>
+              <span className="text-xs text-slate-400">Komunitas Lari Indonesia</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-2">
@@ -35,7 +35,7 @@ export default function Navbar({ current, onNavigate }) {
             <select
               value={current}
               onChange={(e) => onNavigate(e.target.value)}
-              className="px-3 py-2 rounded-md border border-gray-300 bg-white text-sm"
+              className="px-3 py-2 rounded-md border border-slate-700 bg-slate-900 text-sm text-slate-100"
             >
               <option value="home">Beranda</option>
               <option value="events">Kegiatan</option>

@@ -26,19 +26,19 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-16 bg-white">
+    <section id="events" className="py-16 bg-slate-950">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Kegiatan Rutin</h2>
-        <p className="text-gray-600 mb-8 max-w-2xl">
+        <h2 className="text-3xl font-bold text-white mb-6">Kegiatan Rutin</h2>
+        <p className="text-slate-300 mb-8 max-w-2xl">
           Ikut serta dalam berbagai kegiatan kami. Semua kegiatan terbuka untuk pemula maupun pelari berpengalaman.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {events.map((e) => (
-            <div key={e.id} className="rounded-xl border border-gray-200 p-5 hover:shadow-lg transition-shadow">
-              <div className="text-sm text-gray-500">{e.date} • {e.location}</div>
-              <h3 className="mt-2 font-semibold text-gray-900">{e.title}</h3>
-              <p className="mt-2 text-gray-600 text-sm">{e.description}</p>
-              <button className="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900">
+            <div key={e.id} className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:shadow-lg hover:shadow-sky-500/10 transition-shadow">
+              <div className="text-sm text-slate-400">{e.date} • {e.location}</div>
+              <h3 className="mt-2 font-semibold text-white">{e.title}</h3>
+              <p className="mt-2 text-slate-300 text-sm">{e.description}</p>
+              <button className="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 text-slate-900 text-sm font-bold">
                 Daftar
               </button>
             </div>
